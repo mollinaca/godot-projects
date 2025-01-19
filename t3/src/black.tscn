@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://n81d04n6x4n2"]
+
+[ext_resource type="Script" path="res://src/black.gd" id="1_8ewok"]
+[ext_resource type="Texture2D" uid="uid://colemgylrhcp2" path="res://assets/square_32x32.png" id="1_ku2sl"]
+
+[node name="Black" type="Area2D"]
+script = ExtResource("1_8ewok")
+
+[node name="Square32x32" type="Sprite2D" parent="."]
+position = Vector2(20, 37)
+texture = ExtResource("1_ku2sl")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://iqat3ftwpely"]
+
+[ext_resource type="Texture2D" uid="uid://dcdmbv38fy6k7" path="res://assets/images/explosion.png" id="1_favey"]
+[ext_resource type="Script" path="res://src/explosion.gd" id="2_lu32g"]
+
+[node name="Explosion" type="Sprite2D"]
+texture = ExtResource("1_favey")
+hframes = 8
+vframes = 8
+frame = 22
+script = ExtResource("2_lu32g")

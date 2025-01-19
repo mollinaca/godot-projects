@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctrdhqr5g6mi8"]
+
+[ext_resource type="Texture2D" uid="uid://bjpdb18yexlx3" path="res://assets/game_main_1600x900.jpg" id="1_8xc6k"]
+[ext_resource type="PackedScene" uid="uid://n81d04n6x4n2" path="res://src/black.tscn" id="2_5eeu5"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameMain1600x900" type="Sprite2D" parent="."]
+texture = ExtResource("1_8xc6k")
+centered = false
+
+[node name="Black" parent="." instance=ExtResource("2_5eeu5")]
+position = Vector2(92, 236)

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://f7g1wj81h7ja"]
+
+[ext_resource type="Texture2D" uid="uid://mxecf8nyh8lo" path="res://assets/images/bg.png" id="1_1l3xe"]
+[ext_resource type="Script" path="res://main.gd" id="1_oy7bn"]
+[ext_resource type="PackedScene" uid="uid://co7ufumw54nvb" path="res://src/Tako.tscn" id="2_j62oc"]
+[ext_resource type="FontFile" uid="uid://bvb6jw0fafdbc" path="res://assets/fonts/Xolonium-Regular.ttf" id="3_p1fw0"]
+
+[sub_resource type="Theme" id="Theme_dvn0e"]
+default_font = ExtResource("3_p1fw0")
+default_font_size = 33
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_oy7bn")
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_1l3xe")
+centered = false
+
+[node name="Tako" parent="." instance=ExtResource("2_j62oc")]
+position = Vector2(144, 152)
+
+[node name="Tako2" parent="." instance=ExtResource("2_j62oc")]
+position = Vector2(417, 245)
+
+[node name="Tako3" parent="." instance=ExtResource("2_j62oc")]
+position = Vector2(640, 116)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_top = 192.0
+offset_right = 800.0
+offset_bottom = 215.0
+theme = SubResource("Theme_dvn0e")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "GAME CLEAR!"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmcbxcjacu242"]
+
+[ext_resource type="Texture2D" uid="uid://d1dpifrl5s062" path="res://assets/bg.png" id="1_xfkka"]
+[ext_resource type="PackedScene" uid="uid://dqf23qwkcimk6" path="res://src/tako.tscn" id="2_s3s85"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_xfkka")
+centered = false
+
+[node name="Tako" parent="." instance=ExtResource("2_s3s85")]
+position = Vector2(353, 224)

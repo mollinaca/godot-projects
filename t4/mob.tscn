@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://cg4a2vcn7s8co"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_kgtga"]
+[ext_resource type="Texture2D" uid="uid://xxei0lggv065" path="res://art/enemyFlyingAlt_1.png" id="1_rni66"]
+[ext_resource type="Texture2D" uid="uid://btlg5njopnj1l" path="res://art/enemyFlyingAlt_2.png" id="2_rkvrx"]
+[ext_resource type="Texture2D" uid="uid://dc2bvf1kgvfor" path="res://art/enemySwimming_1.png" id="3_qba66"]
+[ext_resource type="Texture2D" uid="uid://cjlfjor3h54uv" path="res://art/enemySwimming_2.png" id="4_bulj1"]
+[ext_resource type="Texture2D" uid="uid://c2fpctk8vypds" path="res://art/enemyWalking_1.png" id="5_t22by"]
+[ext_resource type="Texture2D" uid="uid://dr8wvrwle3hmc" path="res://art/enemyWalking_2.png" id="6_5em7d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1epju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rni66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rkvrx")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qba66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bulj1")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_t22by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5em7d")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6a627"]
+radius = 30.0
+height = 64.0
+
+[node name="Mob" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_kgtga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_1epju")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_6a627")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
