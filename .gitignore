@@ -1,0 +1,6 @@
+^assests/.gitkeep
+assets/*
+^build/.gitkeep
+build/*
+^ideas/.gitkeep
+ideas/*
